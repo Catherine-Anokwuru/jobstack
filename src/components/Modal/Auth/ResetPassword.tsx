@@ -43,7 +43,7 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
         Reset your password
       </Text>
       {success ? (
-        <Text mb={4}>Check your email :)</Text>
+        <Text mb={4} textAlign={'center'}>Check your email to reset your password</Text>
       ) : (
         <>
           <Text fontSize="sm" textAlign="center" mb={2}>
@@ -106,7 +106,8 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
         >
           LOGIN
         </Text>
-        <Icon as={BsDot} />
+      <Text mx={'1rem'}> | </Text>
+
         <Text
           onClick={() =>
             setAuthModalState((prev) => ({

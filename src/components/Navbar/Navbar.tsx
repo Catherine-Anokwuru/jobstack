@@ -12,8 +12,8 @@ const Navbar: React.FC = () => {
     <Wrapper>
       <div className="nav-center">
         <Flex align={"center"}>
-          <Image src="/images/favicon.ico" w={"50px"} pr="0.5rem" />
-          <Image src="/images/jobstack.svg" w={"7rem"} />
+          <Image src="/images/favicon.ico" alt="logo" w={"50px"} pr="0.5rem" />
+          <Image src="/images/jobstack.svg" alt="logo text" w={"7rem"} />
         </Flex>
         {/* <SearchInput/> */}
         <RightTab user={user} />
