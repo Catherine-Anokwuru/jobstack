@@ -13,7 +13,7 @@ const OAuthButtons: React.FC = () => {
         isLoading={loading}
         onClick={() => signInWithGoogle()}
       >
-        <Image src="/images/google.png" h={"20px"} mr={4} />
+        <Image src="/images/google.png" alt="google" h={"20px"} mr={4} />
         Continue with Google
       </Button>
       <Text textAlign={"center"} color={"red"} fontSize={"10pt"}>

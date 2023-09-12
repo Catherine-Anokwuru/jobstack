@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -24,18 +24,18 @@ type AuthModalProps = {};
 const AuthModal: React.FC<AuthModalProps> = () => {
   const [modalState, setModalState] = useRecoilState(authModalState);
 
-  const handleClose = () => {
+  const handleClose = useCallback(()=>{
     setModalState((prev) => ({
       ...prev,
       open: false,
-    }));
-  };
+    }))
+  }, [setModalState]);
 
   // USER AUTHENTICATION/AUTO CLOSE MODAL
   const [user, loading, error] = useAuthState(auth);
   useEffect(() => {
     if (user) handleClose();
-    console.log("user", user);
+    // console.log("user", user);
   }, [user]);
 
   return (
@@ -49,7 +49,7 @@ const AuthModal: React.FC<AuthModalProps> = () => {
         <ModalContent>
           <ModalHeader textAlign={"center"}>
             {(modalState.view === "login" && "Login") ||
-              (modalState.view === "signup" && "Sign up") 
+              (modalState.view === "signup" && "Sign up")
              }
           </ModalHeader>
           <ModalCloseButton />
