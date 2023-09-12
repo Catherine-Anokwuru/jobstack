@@ -32,12 +32,12 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
   };
   return (
     <Flex direction="column" alignItems="center" width="100%">
-      <Image src={"/images/favicon.ico"} w={"2rem"} mb={2} />
+      <Image src={"/images/favicon.ico"} alt="logo" w={"2rem"} mb={2} />
       <Image
         src={"/images/Jobstack.svg"}
         w={"8rem"}
         h={"3rem"}
-        mb={2}
+        mb={2} alt='logo text'
       />
       <Text fontWeight={700} mb={2} fontSize={20}>
         Reset your password
